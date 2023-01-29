@@ -1,0 +1,7 @@
+/*Pop up*/
+.place-carte {
+    display: flex;
+    margin-top: -260px;
+    z-index: 9999;
+    visibility: hidden;
+}

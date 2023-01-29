@@ -1,0 +1,154 @@
+/* ********** Général ********** */
+html, body {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.leaflet-right{
+    display:  none;
+}
+
+/*Top*/
+.main-div{ 
+    height: 85vh;
+    width: 100%;
+}
+
+/*Place*/
+.place{
+    height: 40vh;
+    background-color: #f46036;
+    color: white;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.place-photo{
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    margin: 0.7rem;
+    object-fit: cover;
+}
+
+.place-infos{
+    margin: 0.7rem;
+}
+
+.place-buttons{
+    margin: 1rem 2rem 1rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;    
+}
+
+.place-icon{
+    text-shadow: 3px 3px #d62828;
+}
+
+.btn {
+    background-color: white;
+    color:#d62828;
+    border:none;
+    border-radius:  8px;
+    padding: 0.5rem;
+    margin: 0.5rem 1rem;
+    box-shadow: 3px 3px #d62828;
+}
+
+.btn:hover{
+    background-color: #d62828;
+    color: white;
+    box-shadow: 3px 3px white;
+}
+
+.place-icon:hover{
+    color: #d62828;
+    text-shadow: 3px 3px white;
+}
+
+
+/*Menu */
+a:link, a:visited{
+    font-size: 28px;
+    text-decoration: none;
+    color: #d62828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.nav {
+    width: 80%;
+    height: 15vh;
+    background-color: white;
+    border: #d62828 solid 3px;
+    opacity: 50%;
+    display: inherit;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-active{
+    opacity: 100%;
+}
+
+.nav-icon{
+    margin: 30px;
+}
+
+/* ********* Media query ********** */
+@media only screen and (max-width : 500px) {
+    .nav-text{
+        display: none;
+    }
+
+    .place{
+        height: 80vh;
+        margin: 0.5rem;
+        flex-direction: column;
+    }
+
+    .place-infos{
+        font-size: 14px;
+    }
+
+    .place-buttons{
+        top: 175px;
+    }
+
+    .place-photo{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 501px) and (max-width : 800px) {
+    /* .place-carte{
+        margin-top: -495px;
+    } */
+    
+    .place-photo{
+        display: none;
+    }
+
+}

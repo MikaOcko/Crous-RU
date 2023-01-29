@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/carte.css">
+
+    <!--CDN Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <!--CDN Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!--Leaflet JS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://irtshdf.fr/wp-content/uploads/2021/04/Crous-logo-lille-nord-pas-de-calais-350x350.png" type="image/x-icon">
+    
+    <!--Titre de l'onglet page-->
+    <title>Crous MEL - Carte</title>
+</head>
+
+<body>
+    <main>
+        <!-- Top : carte -->
+        <div class="main-div" 
+            <div id="map"></div>
+            <div class="place place-carte" id="popup">
+                <img src="https://www.liberation.fr/resizer/AFNsXyTSOdtI1VTWn1WIStwm7JA=/1200x630/cloudfront-eu-central-1.images.arcpublishing.com/liberation/D2UPC3JI6BEHVDKL4ZPUAN7FPM.jpg" alt="photo d'illustration" class="place-photo">
+                <div class="place-infos">
+                    <h2 id="place-title">Nom du lieu</h2>
+                    <p id="place-adress">Adresse : 59000 Lille</p>
+                    <p id="place-description">
+                            Description :
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nulla nostrum vel repellat cum ipsum. Dolorem non mollitia temporibus!
+                    </p>
+                </div>
+                <div class="place-buttons">
+                    <button class="btn" id="save-button">
+                            Enregistrer
+                    </button>
+                    <i class="fa-solid fa-rectangle-xmark fa-2xl place-icon" id="place-icon"></i>
+                </div>
+            </div>
+        </div>       
+
+        <!-- Menu -->
+        <nav>
+            <div class="nav nav-active">
+                <a href="index.html" target="#" rel="noopener noreferrer">
+                    <i class="fa-solid fa-map-location-dot fa-xl nav-icon"></i>
+                    <span class="nav-text">Carte</span>
+                </a>
+            </div>
+            <div class="nav">
+                <a href="favoris.html" target="#" rel="noopener noreferrer">
+                    <i class="fa-solid fa-heart fa-xl nav-icon"></i>
+                    <span class="nav-text">Favoris</span>
+                </a>
+            </div>
+        </nav>
+    </main>
+    
+
+    <!--JS-->
+    <script src="assets/js/Map.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
